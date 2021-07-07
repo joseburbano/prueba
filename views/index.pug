@@ -1,0 +1,18 @@
+extends layout
+
+block contenido
+        .panel.crear-proyecto 
+            a(href="/carros") ir carros
+
+        form.agregar-proyecto(action='/api/v1/nuevo-carro' method="POST")
+                .campo
+                    label(for="placa") Placa:
+                    input(type="text" id="placa" name="placa" placeholder="Digite su placa")
+                .campo
+                    label(for="modelo") Modelo:
+                    input( type="text" id="modelo" name="modelo" placeholder="Digite su modelo")
+                .campo
+                    label(for="marca") Marca:
+                    input( type="text" id="marca" name="marca" placeholder="Digite marca")
+                .campo.enviar
+                    input(type="submit" value='Guardar' class="boton")       
